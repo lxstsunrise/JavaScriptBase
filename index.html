@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        let Tc = prompt("Задайте температуру в градусах по цельсию");
+        let Tf = (9 / 5) * Tc + 32;
+        alert("Температура равна" + " " + Tf + " " + "градусов по Фаренгейту");
+    </script>
+    <script>
+        'use strict';
+        let Name = "Василий";
+        let Admin = Name;
+        console.log(Admin);
+    </script>
+    <script>
+        'use strict';
+        let a = 10 + 10 + "10";
+        console.log(a);
+        let b = 10 + "10" + 10;
+        console.log(b);
+        let c = 10 + 10 + +"10";
+        console.log(c);
+        let d = 10 / -"";
+        console.log(d);
+        let e = 10 / +"2,5";
+        console.log(e);
+        /*
+a) складываем два числа, получаем 20, затем соединяем со строкой "10", вследствие конкатенации получаем строку "2010"
+b) объединяем число 10 со строкой "10", затем с числом 10, получаем строку "101010"
+c) складываем два числа, получаем 20, затем прибавляем число 10(строка превратилась в число благодаря унарному плюсу перед строкой) и получаем число 30
+d) пустая строка превратилась в число из за унарного минуса и равна нулю, число 10 делим на 0 и получаем -infinity 
+e) засчёт унарного плюса строка должна была поменяться на число, но так как стоит запятая, а не точка - получаем NaN(Not a number), соответственно при делении числа 10 на Nan - получаем Nan
+*/
+    </script>
+</body>
+
+</html>
