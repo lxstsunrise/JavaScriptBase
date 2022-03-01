@@ -10,16 +10,25 @@
 
 <body>
     <script>
-        'use strict';
-        for (let a = 0; a <= 10; a++) {
-            if (a == 0) {
-                console.log(a + " это ноль");
-            } else if (a % 2 == 0) {
-                console.log(a + " это четное число");
-            } else {
-                console.log(a + " это нечетное число");
-            }
+        'use strict'
+        let maxNum = 999
+        let numeric = {
+            number: +prompt('Введите число от 0 до 999'),
+            units: 0,
+            tens: 0,
+            hundreds: 0,
+        };
+        if (numeric.number <= 0) {
+            numeric.units = numeric.number;
+        } else if (numeric.number <= 999) {
+            numeric.units = Math.floor(numeric.number % 10);
+            numeric.tens = Math.floor(numeric.number / 10 % 10);
+            numeric.hundreds = Math.floor(numeric.number / 100 % 10);
+        } else {
+            numeric.number = 0;
+            console.log('Вы ввели число за диапазоном 0 - 999');
         }
+        console.log(numeric);
     </script>
 </body>
 
